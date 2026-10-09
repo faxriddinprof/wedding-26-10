@@ -40,7 +40,7 @@ class InvitationTests(TestCase):
         self.assertContains(response, "Labi hovuz")
         self.assertContains(response, "Karmana tumani, Navoiy viloyati")
         self.assertContains(response, "Dushanba · soat 18:00")
-        self.assertContains(response, 'class="wedding-day" aria-label="26-oktyabr, nikoh to‘yi">26')
+        self.assertContains(response, 'class="wedding-day" aria-label="26-oktyabr, tantanali marosim (To‘qqiz to‘y)">26')
         self.assertNotContains(response, "ODILBEK")
         self.assertNotContains(response, "31-oktyabr")
         self.assertContains(response, "https://www.google.com/maps/search/?api=1&amp;query=Labi+hovuz+to%27yxonasi%2C+Karmana%2C+Navoiy")

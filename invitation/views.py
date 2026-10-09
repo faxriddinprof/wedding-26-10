@@ -41,12 +41,12 @@ def calendar_event(request):
         "UID:asliddin-guzal-20261026@wedding.local",
         "DTSTAMP:" + timezone.now().strftime("%Y%m%dT%H%M%SZ"),
         "DTSTART:20261026T130000Z",
-        "SUMMARY:Asliddin va Go‘zal — nikoh to‘yi",
+        "SUMMARY:Asliddin va Go‘zal — tantanali marosim (To‘qqiz to‘y)",
         "LOCATION:Labi hovuz to‘yxonasi\\, Karmana tumani\\, Navoiy viloyati",
-        "DESCRIPTION:Sizni nikoh to‘yimizga lutfan taklif etamiz.\\nManzil: " + MAP_URL,
+        "DESCRIPTION:Sizni tantanali marosimimiz — To‘qqiz to‘yga lutfan taklif etamiz.\\nManzil: " + MAP_URL,
         "URL:" + MAP_URL,
         "BEGIN:VALARM", "TRIGGER:-P1D", "ACTION:DISPLAY",
-        "DESCRIPTION:Ertaga Asliddin va Go‘zalning nikoh to‘yi", "END:VALARM",
+        "DESCRIPTION:Ertaga Asliddin va Go‘zalning tantanali marosimi (To‘qqiz to‘y)", "END:VALARM",
         "END:VEVENT", "END:VCALENDAR",
     ]
     folded = []
