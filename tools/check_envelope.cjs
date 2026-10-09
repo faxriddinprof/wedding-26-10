@@ -17,6 +17,8 @@ const fs = require('node:fs');
       await page.locator('#welcome-music').uncheck();
       assert(await page.locator('#welcome').evaluate(el => el.open));
       const bounds = await page.locator('#open-invitation').boundingBox();
+      const shadow = await page.locator('.envelope-shadow').boundingBox();
+      assert(shadow.y + shadow.height <= bounds.y + bounds.height + 1, `${name}: shadow caster stays within the envelope bottom edge`);
       assert(bounds.x >= 0 && bounds.x + bounds.width <= width && bounds.y >= 0 && bounds.y + bounds.height <= height, `${name}: envelope fits viewport`);
       assert(await page.locator('#welcome').evaluate(el => el.scrollWidth <= el.clientWidth), `${name}: no horizontal overflow`);
       await page.screenshot({ path: `test-results/envelope-${name}.png` });

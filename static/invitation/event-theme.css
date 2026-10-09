@@ -50,23 +50,25 @@ h1 { color: #294356; }
 .welcome-dialog.envelope-intro::backdrop { background: #e9ece8; }
 .envelope-heading .eyebrow, .envelope-hint,
 .envelope-controls .welcome-music { color: #5a707c; }
-.envelope-back { background: #1e3445; }
-.envelope-left { background-color: #2b4558; }
-.envelope-right { background-color: #223b4d; }
-.envelope-bottom { background-color: #304e63; }
-.envelope-flap-paper { background-color: #38566a; }
+.envelope-back { background: #203a4d; border-radius: 1px; box-shadow: none; }
+.envelope-side, .envelope-bottom, .envelope-flap-paper { background-image: none; }
+.envelope-left { background-color: #243f53; }
+.envelope-right { background-color: #203b4f; }
+.envelope-bottom { background-color: #29495f; }
+.envelope-flap-paper { background-color: #304f65; }
 .envelope-bottom::after {
-  background: linear-gradient(130deg, #102a3b30, transparent 55%, #adc7d21c);
+  background: linear-gradient(130deg, #102a3b12, transparent 55%, #adc7d208);
 }
 .envelope-flap-paper::after {
-  background: linear-gradient(150deg, #cedde520, transparent 50%, #10263730);
+  background: linear-gradient(150deg, #cedde50c, transparent 50%, #10263712);
 }
-.envelope-flap { filter: drop-shadow(0 3px 2px #10263570); }
-.envelope-shadow { box-shadow: 0 20px 44px #1b35452b, 0 5px 12px #1b354520; }
-.envelope-trigger:hover .envelope-shadow { box-shadow: 0 25px 55px #1b354535, 0 5px 15px #1b354528; }
-.envelope-sprig { color: #b8bdba; filter: drop-shadow(1px 1px 1px #10263570); }
+.envelope-flap { filter: drop-shadow(0 1px 1px #10263560); }
+/* Keep the shadow caster inside the actual paper silhouette. */
+.envelope-shadow { inset: 0; border-radius: 1px; box-shadow: 0 12px 24px -10px #102c3d45, 0 2px 4px #102c3d20; }
+.envelope-trigger:hover .envelope-shadow { box-shadow: 0 14px 28px -10px #102c3d50, 0 2px 4px #102c3d20; }
+.envelope-sprig { color: #8da5b1; filter: drop-shadow(0 1px .3px #10263570); }
 .envelope-flowers-top:not(.envelope-flower-light),
-.envelope-flowers-bottom:not(.envelope-flower-light) { opacity: .78; }
+.envelope-flowers-bottom:not(.envelope-flower-light) { opacity: 1; }
 .envelope-inscription { color: #e1d5b9; }
 .envelope-seal {
   background: linear-gradient(140deg, #fff9e9 8%, #dbc99e 38%, #f1e4c5 64%, #b29b6d);
