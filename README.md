@@ -69,6 +69,18 @@ python manage.py test
 
 ## Internetga joylash
 
+### Duo matnlari tekshiruvi
+
+Salovatning lotincha o‘qilishi: “Allohumma solli ’ala Muhammadiv-va ’ala ali Muhammad.”
+Tekshirish manbasi: [O‘zbekiston musulmonlari idorasi — Namoz saboqlari](https://muslim.uz/uz/e/post/23574-namoz-saboqlari-tashahhud-salavot-duo-audio).
+Arabcha salovatdagi `آل` yozilishi saqlangan; lotincha transliteratsiya uzun
+unlilarni alohida belgilamaydigan, foydalanuvchi tanlagan uslubda.
+
+Nikoh tabrigi hadisning mazmuni sifatida keltirilgan: [Abu Dovud, 2130](https://sunnah.com/abudawud:2130).
+Oyati karimaning parchasi va ma’nosi: [Rum surasi, 21-oyat](https://quran.com/30/21).
+“Allohim, bu oilaga…” hamda sahifa oxiridagi duo — erkin o‘zbekcha tilaklar;
+ular hadis yoki oyatning so‘zma-so‘z tarjimasi emas.
+
 ### Telegram havola preview’i
 
 Sahifa serverdan Open Graph metama’lumotlarini chiqaradi. Preview rasmi:
