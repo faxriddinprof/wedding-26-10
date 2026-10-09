@@ -15,9 +15,11 @@ class InvitationTests(TestCase):
         self.assertContains(response, 'property="og:image:height" content="630"')
         self.assertContains(response, 'name="twitter:card" content="summary_large_image"')
 
-    def test_music_uses_local_una_mattina_file(self):
+    def test_music_uses_local_trimmed_einaudi_file(self):
         response = self.client.get(reverse("home"))
-        self.assertContains(response, '/static/invitation/audio/una-mattina.mp3')
+        self.assertContains(response, '/static/invitation/audio/einaudi-trimmed.m4a')
+        self.assertContains(response, 'type="audio/mp4"')
+        self.assertNotContains(response, 'una-mattina.mp3')
         self.assertContains(response, 'id="background-audio" loop')
         self.assertNotContains(response, 'sokin-ohang.mp3')
         self.assertNotContains(response, 'youtube')

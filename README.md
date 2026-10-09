@@ -48,7 +48,7 @@ shu yerda ko‘rinadi. Saytda mehmon javoblarini yig‘ish bo‘limi olib tashla
 - Rang, shrift, joylashuv: `static/invitation/style.css`.
 - Interaktivlik: `static/invitation/app.js`.
 - Sana va xarita: `invitation/views.py`; matndagi sana va kalendar ham mos o‘zgartirilsin.
-- Musiqa: `static/invitation/audio/una-mattina.mp3`.
+- Musiqa: `static/invitation/audio/einaudi-trimmed.m4a` — foydalanuvchi bergan `einaudi.m4a` faylining dastlabki 28 soniyasi kesilgan nusxasi.
 
 Hozir foydalanuvchi taqdim etgan “Ludovico Einaudi — Una Mattina” MP3 fayli
 loyiha ichidan ijro etiladi; YouTube yoki tashqi pleer ishlatilmaydi.
