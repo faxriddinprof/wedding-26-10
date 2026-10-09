@@ -54,4 +54,4 @@ Manzil: Labi hovuz to‘yxonasi, Karmana tumani, Navoiy viloyati.
 Xarita hozircha manzil bo‘yicha qidiruv: aniq Google Maps pin havolasi berilganda
 `invitation/views.py` ichidagi `MAP_URL` yangilanadi.
 
-Telegram preview: `/static/invitation/images/invitation-preview-v2.jpg`.
+Telegram preview: `/static/invitation/images/invitation-preview-blue.jpg`.

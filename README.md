@@ -84,7 +84,7 @@ ular hadis yoki oyatning so‘zma-so‘z tarjimasi emas.
 ### Telegram havola preview’i
 
 Sahifa serverdan Open Graph metama’lumotlarini chiqaradi. Preview rasmi:
-`static/invitation/images/invitation-preview-v2.jpg` (1200×630). Mavjud CSS
+`static/invitation/images/invitation-preview-blue.jpg` (1200×630). Mavjud CSS
 konvertidan tayyorlangan; ismlar, sana va vaqt ham rasmda ko‘rinadi.
 Uni qayta yaratish: `node tools/generate_share_preview.cjs` (Playwright va
 Chrome talab qilinadi; zarur bo‘lsa `PLAYWRIGHT_MODULE` yo‘lini belgilang).
