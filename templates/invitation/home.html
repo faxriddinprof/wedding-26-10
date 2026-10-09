@@ -1,0 +1,212 @@
+{% load static %}
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f4ec">
+  <title>Asliddin & Go‘zal — Nikoh to‘yiga taklifnoma</title>
+  <meta name="description" content="Asliddin va Go‘zalning nikoh to‘yiga lutfan taklif etamiz. 26-oktyabr 2026, soat 18:00. Labi hovuz to‘yxonasi, Karmana tumani, Navoiy viloyati.">
+  <meta property="og:title" content="Asliddin & Go‘zal — Nikoh to‘yiga taklifnoma">
+  <meta property="og:description" content="Sizni nikoh to‘yimizga lutf bilan taklif etamiz. 26-oktyabr 2026 · 18:00. Labi hovuz, Karmana, Navoiy.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Asliddin & Go‘zal · 26.10.2026">
+  <meta property="og:locale" content="uz_UZ">
+  <meta property="og:url" content="{{ share_url }}">
+  <meta property="og:image" content="{{ share_image_url }}">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Gulli konvert va A&G muhri. Asliddin va Go‘zalning nikoh to‘yi — 26-oktyabr 2026, soat 18:00.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Asliddin & Go‘zal — Nikoh to‘yiga taklifnoma">
+  <meta name="twitter:description" content="Sizni lutf bilan taklif etamiz. 26-oktyabr 2026 · 18:00 · Labi hovuz, Karmana, Navoiy.">
+  <meta name="twitter:image" content="{{ share_image_url }}">
+  <link rel="canonical" href="{{ share_url }}">
+  <link rel="icon" href="{% static 'invitation/images/favicon.svg' %}" type="image/svg+xml">
+  <link rel="preload" href="{% static 'invitation/fonts/cormorant-regular.ttf' %}" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="{% static 'invitation/images/garden.jpg' %}" as="image" fetchpriority="high">
+  <link rel="stylesheet" href="{% static 'invitation/style.css' %}">
+  <link rel="stylesheet" href="{% static 'invitation/envelope.css' %}">
+  <script src="{% static 'invitation/app.js' %}" defer></script>
+</head>
+<body data-event-date="{{ event_iso }}">
+  {% include 'invitation/icons.html' %}
+  <a class="skip-link" href="#asosiy">Asosiy mazmunga o‘tish</a>
+  <div class="reading-progress" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="monogram" href="#asosiy" aria-label="Asliddin va Go‘zal, bosh sahifa">A<span>&</span>G</a>
+    <nav aria-label="Sahifa bo‘limlari">
+      <a href="#taklif">Taklifnoma</a><a href="#duo">Ezgu duo</a><a href="#manzil">Manzil</a>
+    </nav>
+    <a class="header-date" href="#sana">26 <span>·</span> 10 <span>·</span> 2026</a>
+  </header>
+
+  <main id="asosiy">
+    <section class="hero" aria-labelledby="couple-names">
+      <div class="hero-side hero-side-left" aria-hidden="true">IKKI QALB · BIR TAQDIR</div>
+      <div class="hero-frame">
+        <img class="hero-art" src="{% static 'invitation/images/garden.jpg' %}" width="1024" height="1536" alt="Samarqand me’morchiligidan ilhomlangan ravoq, sokin bog‘ va oq gullar" fetchpriority="high">
+        <div class="hero-content">
+          <p class="bismillah" lang="ar" dir="rtl">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+          <p class="eyebrow">ALLOHNING NOMI BILAN</p>
+          <h1 id="couple-names">Asliddin<span class="name-and">&</span>Go‘zal</h1>
+          <div class="hero-rule" aria-hidden="true"><span></span><svg class="icon"><use href="#icon-star"/></svg><span></span></div>
+          <p class="hero-subtitle">NIKOH TO‘YIGA TAKLIFNOMA</p>
+          <a class="hero-date" href="#sana">26 . 10 . 2026</a>
+          <p class="hero-location">Navoiy · Karmana</p>
+        </div>
+        <a class="scroll-cue" href="#taklif" aria-label="Taklifnomani o‘qish"><span>QALBIMIZDAN SIZGA</span><span class="scroll-line"></span></a>
+      </div>
+      <div class="hero-side hero-side-right" aria-hidden="true">MEHR · SAKINAT · BARAKA</div>
+    </section>
+
+    <section class="verse-section reveal" aria-label="Qur’oni karimdan">
+      <svg class="ornament icon" aria-hidden="true"><use href="#icon-star"/></svg>
+      <p class="verse-arabic" lang="ar" dir="rtl">وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً</p>
+      <blockquote>«Va orangizda mehr va rahmat paydo qildi.»</blockquote>
+      <a class="source-link" href="https://quran.com/30/21" target="_blank" rel="noopener noreferrer">Rum surasi, 21-oyat mazmunidan</a>
+    </section>
+
+    <section id="taklif" class="invitation-section section-pad reveal">
+      <div class="section-number" aria-hidden="true">01 <span></span> TAKLIF</div>
+      <svg class="invitation-sprig sprig-left" aria-hidden="true"><use href="#sprig"/></svg>
+      <svg class="invitation-sprig sprig-right" aria-hidden="true"><use href="#sprig"/></svg>
+      <div class="narrow centered">
+        <p class="eyebrow">AZIZ VA QADRLI MEHMONIMIZ</p>
+        <h2>Sizni lutf bilan<br><em>taklif etamiz.</em></h2>
+        <p class="greeting invitation-copy">Assalomu alaykum va rahmatullohi va barokatuh!</p>
+        <p class="invitation-copy">Allohning marhamati, ota-onalarimizning duolari bilan yangi hayot sari qadam qo‘ymoqdamiz.</p>
+        <p class="invitation-copy">Sizni va oila a’zolaringizni nikoh to‘yimiz munosabati bilan yoziladigan dasturxonimizga lutfan taklif etamiz. Ushbu saodatli kunimizda aziz mehmonimiz bo‘lib, quvonchimizga sherik bo‘lishingizni istaymiz.</p>
+        <p class="invitation-closing">Tashrifingiz — biz uchun ehtirom,<br>duolaringiz — eng go‘zal tuhfa.</p>
+        <div class="signature">Asliddin <span>&</span> Go‘zal</div>
+        <p class="eyebrow family-label">VA ULARNING OILALARI</p>
+      </div>
+    </section>
+
+    <section id="sana" class="date-section section-pad">
+      <div class="section-number light" aria-hidden="true">02 <span></span> INTIQ KUTILGAN KUN</div>
+      <div class="date-layout content-width">
+        <div class="date-copy reveal">
+          <p class="eyebrow">INSHOOLLOH</p>
+          <h2>Bir go‘zal kun.<br><em>Bir umr xotira.</em></h2>
+          <div class="date-detail"><span class="big-day">26</span><div><span class="date-month">Oktyabr, 2026</span><span class="date-weekday">Dushanba · soat 18:00</span></div></div>
+          <p class="date-note">Uchrashuvimizga qolgan har bir lahzani<br>ezgu niyat bilan kutmoqdamiz.</p>
+          <a class="button button-light" href="{% url 'calendar' %}"><svg class="icon" aria-hidden="true"><use href="#icon-calendar"/></svg>Kalendarga qo‘shish<svg class="icon arrow-icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a>
+        </div>
+        <div class="calendar-card reveal">
+          <div class="calendar-heading"><span>O K T Y A B R</span><span>2026</span></div>
+          <div class="calendar-grid" aria-label="2026-yil oktyabr oyi, to‘y sanasi 26-oktyabr">
+            <span class="weekday">Du</span><span class="weekday">Se</span><span class="weekday">Ch</span><span class="weekday">Pa</span><span class="weekday">Ju</span><span class="weekday">Sh</span><span class="weekday">Ya</span>
+            {% for blank in calendar_blanks %}<span aria-hidden="true"></span>{% endfor %}
+            {% for day in calendar_days %}<span{% if day == 26 %} class="wedding-day" aria-label="26-oktyabr, nikoh to‘yi"{% endif %}>{{ day }}{% if day == 26 %}<svg class="calendar-heart" aria-hidden="true"><use href="#icon-heart"/></svg>{% endif %}</span>{% endfor %}
+          </div>
+          <div class="calendar-caption"><svg class="icon" aria-hidden="true"><use href="#icon-heart"/></svg>Bizning kunimiz</div>
+        </div>
+      </div>
+      <div class="countdown-wrap reveal">
+        <p id="countdown-heading" class="eyebrow">SAODATLI KUNIMIZGACHA</p>
+        <div class="countdown" role="timer" aria-label="To‘yga qolgan vaqt">
+          <div><span id="days">—</span><small>KUN</small></div><span class="countdown-dot">:</span>
+          <div><span id="hours">—</span><small>SOAT</small></div><span class="countdown-dot">:</span>
+          <div><span id="minutes">—</span><small>DAQIQA</small></div><span class="countdown-dot">:</span>
+          <div><span id="seconds">—</span><small>SONIYA</small></div>
+        </div>
+        <noscript><p>26-oktyabr 2026-yil, soat 18:00 (Toshkent vaqti).</p></noscript>
+      </div>
+    </section>
+
+    <section id="duo" class="prayer-section section-pad reveal">
+      <div class="section-number" aria-hidden="true">03 <span></span> QALBDAN DUO</div>
+      <div class="narrow centered">
+        <div class="prayer-emblem" aria-hidden="true"><svg class="icon"><use href="#icon-star"/></svg></div>
+        <p class="eyebrow">ENG GO‘ZAL TO‘YONA — DUO</p>
+        <h2>Salovat ayting,<br><em>duoda eslang.</em></h2>
+        <p>Bu ikki yoshning baxtiga ezgu duolaringiz hamroh bo‘lsin. Alloh ularning hayotini farovon, oilasini mehrga to‘la va barakali qilsin.</p>
+        <div class="salawat-card">
+          <p class="salawat-arabic" lang="ar" dir="rtl">اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ</p>
+          <p class="transliteration">Allohumma solli ‘ala Muhammad<br>va ‘ala oli Muhammad.</p>
+          <span class="small-divider" aria-hidden="true"></span>
+          <p class="dua-text">Allohim, bu oilaga mehr, xotirjamlik va baraka ato et. Ularni yaxshilikda birlashtir, muhabbatlarini bardavom qil.</p>
+        </div>
+        <p class="prayer-footnote">«Alloh sizga baraka bersin va ikkingizni yaxshilikda birlashtirsin.»</p>
+        <a class="source-link" href="https://sunnah.com/abudawud:2130" target="_blank" rel="noopener noreferrer">Nikoh tabrigi duosi mazmunidan · Abu Dovud, 2130</a>
+      </div>
+    </section>
+
+    <section id="manzil" class="venue-section section-pad">
+      <div class="section-number" aria-hidden="true">04 <span></span> DIYDOR MANZILI</div>
+      <div class="venue-layout content-width">
+        <div class="venue-illustration reveal">
+          <img src="{% static 'invitation/images/garden.jpg' %}" loading="lazy" width="1024" height="1536" alt="Oq gullar va sarvlar orasidagi me’moriy bog‘ning badiiy tasviri">
+          <span class="art-caption">MEHR BILAN KUTILASIZ</span>
+        </div>
+        <div class="venue-copy reveal">
+          <p class="eyebrow">QUTLUG‘ QADAMINGIZGA MUNTAZIRMIZ</p>
+          <h2>Diydor uchun<br><em>go‘zal bir manzil.</em></h2>
+          <div class="venue-address"><svg class="icon" aria-hidden="true"><use href="#icon-pin"/></svg><div><h3>Labi hovuz</h3><p>To‘yxonasi<br>Karmana tumani, Navoiy viloyati</p></div></div>
+          <div class="venue-time"><svg class="icon" aria-hidden="true"><use href="#icon-calendar"/></svg><p>26-oktyabr, dushanba<br><strong>Boshlanishi — 18:00</strong></p></div>
+          <a class="button" href="{{ map_url }}" target="_blank" rel="noopener noreferrer">Xaritada ko‘rish<svg class="icon arrow-icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a>
+          <p class="venue-note">Yo‘lingiz bexatar, qadamingiz qutlug‘ bo‘lsin.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer centered">
+    <svg class="icon footer-star" aria-hidden="true"><use href="#icon-star"/></svg>
+    <p class="footer-message">Yaxshi kunlar, yaxshi insonlar bilan.</p>
+    <a class="footer-names" href="#asosiy">Asliddin <em>&</em> Go‘zal</a>
+    <p class="eyebrow">26 OKTYABR 2026 · NAVOIY</p>
+    <p class="footer-dua">Alloh xayrli va barakali qilsin. Omin.</p>
+    <button id="replay-invitation" class="replay-invitation" type="button" hidden>Konvertni qayta ochish</button>
+  </footer>
+
+  <audio id="background-audio" loop preload="none"><source src="{% static 'invitation/audio/una-mattina.mp3' %}" type="audio/mpeg"></audio>
+  <button id="music-toggle" class="music-toggle" type="button" aria-label="Musiqani yoqish" aria-pressed="false" hidden><svg class="icon" aria-hidden="true"><use id="sound-icon" href="#icon-muted"/></svg></button>
+  <div id="audio-status" class="sr-only" role="status"></div>
+
+  <dialog id="welcome" class="welcome-dialog envelope-intro" aria-label="Asliddin va Go‘zalning nikoh to‘yiga taklifnomasi" aria-describedby="welcome-description">
+    <div class="envelope-layout">
+      <div class="envelope-heading">
+        <p class="eyebrow">SIZ UCHUN, MEHR BILAN</p>
+      </div>
+      <button id="open-invitation" class="envelope-trigger" type="button" aria-label="Asliddin va Go‘zalning taklifnoma konvertini ochish" aria-describedby="welcome-description">
+        <span class="envelope-shadow" aria-hidden="true"></span>
+        <span class="envelope-back" aria-hidden="true"></span>
+        <span class="envelope-glow" aria-hidden="true"></span>
+        <span class="envelope-portal" aria-hidden="true"></span>
+        <span class="envelope-letter" aria-hidden="true">
+          <span class="letter-border"></span>
+          <span class="letter-bismillah" lang="ar" dir="rtl">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</span>
+          <span class="letter-eyebrow">NIKOH TO‘YIGA TAKLIFNOMA</span>
+          <span class="letter-names">Asliddin<span>&</span>Go‘zal</span>
+          <span class="letter-date">26 · 10 · 2026</span>
+          <span class="letter-invite">Sizni lutf bilan taklif etamiz.</span>
+        </span>
+        <span class="envelope-pocket" aria-hidden="true">
+        <span class="envelope-side envelope-left" aria-hidden="true"></span>
+        <span class="envelope-side envelope-right" aria-hidden="true"></span>
+        <span class="envelope-bottom" aria-hidden="true"></span>
+        <svg class="envelope-sprig envelope-sprig-left" aria-hidden="true"><use href="#sprig"/></svg>
+        <svg class="envelope-sprig envelope-sprig-right" aria-hidden="true"><use href="#sprig"/></svg>
+        <img class="envelope-flowers-bottom" src="{% static 'invitation/images/envelope-florals.svg' %}" alt="" aria-hidden="true" width="320" height="210">
+        <img class="envelope-flowers-bottom envelope-flower-light" src="{% static 'invitation/images/envelope-florals.svg' %}" alt="" aria-hidden="true" width="320" height="210">
+        <span class="envelope-inscription" aria-hidden="true">ASLIDDIN & GO‘ZAL</span>
+        </span>
+        <span class="envelope-flap" aria-hidden="true">
+        <span class="envelope-flap-paper"></span>
+        <img class="envelope-flowers-top" src="{% static 'invitation/images/envelope-florals.svg' %}" alt="" width="320" height="210">
+        <img class="envelope-flowers-top envelope-flower-light" src="{% static 'invitation/images/envelope-florals.svg' %}" alt="" width="320" height="210">
+        <span class="envelope-seal" aria-hidden="true"><span class="seal-initials">A<em>&</em>G</span></span>
+        </span>
+      </button>
+      <div class="envelope-controls">
+        <p id="welcome-description" class="envelope-hint"><span aria-hidden="true">⌃</span>Ochish uchun konvert ustiga bosing</p>
+        <label class="welcome-music"><input type="checkbox" id="welcome-music" checked> Musiqa bilan ochish</label>
+      </div>
+    </div>
+  </dialog>
+</body>
+</html>
