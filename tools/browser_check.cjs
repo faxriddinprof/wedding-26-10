@@ -35,7 +35,7 @@ const fs = require('node:fs');
     await page.reload({ waitUntil: 'networkidle' });
     assert(!(await page.locator('#welcome').evaluate(el => el.open)), 'Welcome does not obstruct repeat visit');
     const calendar = await context.request.get(base + '/wedding.ics');
-    assert((await calendar.text()).includes('DTSTART:20261026T130000Z'));
+    assert((await calendar.text()).includes('DTSTART:20261031T120000Z'));
     for (const width of [320, 375, 390, 768, 1024, 1440]) {
       await page.setViewportSize({ width, height: 844 });
       await page.goto(base + '/#asosiy', { waitUntil: 'networkidle' });

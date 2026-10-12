@@ -17,16 +17,16 @@ class InvitationTests(TestCase):
 
     def test_share_preview_is_absolute_and_server_rendered(self):
         response = self.client.get(reverse("home"), secure=True)
-        self.assertContains(response, 'property="og:image" content="https://testserver/static/invitation/images/invitation-preview-blue.jpg"')
+        self.assertContains(response, 'property="og:image" content="https://testserver/static/invitation/images/invitation-preview-anvar.jpg"')
         self.assertContains(response, 'property="og:url" content="https://testserver/"')
         self.assertContains(response, 'property="og:image:width" content="1200"')
         self.assertContains(response, 'property="og:image:height" content="630"')
         self.assertContains(response, 'name="twitter:card" content="summary_large_image"')
 
-    def test_music_uses_local_trimmed_einaudi_file(self):
+    def test_music_uses_local_trimmed_kokun_file(self):
         response = self.client.get(reverse("home"))
-        self.assertContains(response, '/static/invitation/audio/einaudi-trimmed.m4a')
-        self.assertContains(response, 'type="audio/mp4"')
+        self.assertContains(response, '/static/invitation/audio/kokun-trimmed.mp3')
+        self.assertContains(response, 'type="audio/mpeg"')
         self.assertNotContains(response, 'una-mattina.mp3')
         self.assertContains(response, 'id="background-audio" loop')
         self.assertNotContains(response, 'sokin-ohang.mp3')
@@ -34,17 +34,19 @@ class InvitationTests(TestCase):
 
     def test_invitation_contains_correct_event_and_venue(self):
         response = self.client.get(reverse("home"))
-        self.assertContains(response, "Asliddin")
-        self.assertContains(response, "Go‘zal")
-        self.assertContains(response, '2026-10-26T18:00:00+05:00')
-        self.assertContains(response, "Labi hovuz")
-        self.assertContains(response, "Karmana tumani, Navoiy viloyati")
-        self.assertContains(response, "Dushanba · soat 18:00")
-        self.assertContains(response, 'class="wedding-day" aria-label="26-oktyabr, tantanali marosim (To‘qqiz to‘y)">26')
+        self.assertContains(response, "Anvarjon")
+        self.assertContains(response, "Jasminaxon")
+        self.assertContains(response, '2026-10-31T17:00:00+05:00')
+        self.assertContains(response, "Ratana Restaurant")
+        self.assertContains(response, "Pastdarg‘om tumani, Samarqand viloyati")
+        self.assertContains(response, "Shanba · soat 17:00")
+        self.assertContains(response, 'class="wedding-day" aria-label="31-oktyabr, nikoh to‘yi">31')
         self.assertNotContains(response, "ODILBEK")
-        self.assertNotContains(response, "31-oktyabr")
-        self.assertContains(response, "https://www.google.com/maps/search/?api=1&amp;query=Labi+hovuz+to%27yxonasi%2C+Karmana%2C+Navoiy")
-        self.assertEqual(EVENT_DATE.astimezone(ZoneInfo("UTC")).hour, 13)
+        self.assertNotContains(response, "26-oktyabr")
+        self.assertNotContains(response, "Asliddin")
+        self.assertNotContains(response, "Go‘zal")
+        self.assertContains(response, "https://maps.app.goo.gl/iJbevmkV5SUXWaeW6")
+        self.assertEqual(EVENT_DATE.astimezone(ZoneInfo("UTC")).hour, 12)
 
     def test_response_is_persisted_and_private(self):
         guest = GuestResponse.objects.create(name="Avvalgi mehmon", attendance="yes", guests=2, message="Baxtli bo‘ling!")
@@ -55,12 +57,12 @@ class InvitationTests(TestCase):
         response = self.client.get(reverse("calendar"))
         self.assertEqual(response.status_code, 200)
         payload = response.content.decode("utf-8")
-        self.assertIn("DTSTART:20261026T130000Z\r\n", payload)
+        self.assertIn("DTSTART:20261031T120000Z\r\n", payload)
         self.assertIn("BEGIN:VCALENDAR\r\n", payload)
         self.assertIn('attachment;', response["Content-Disposition"])
         for line in payload.split("\r\n"):
             self.assertLessEqual(len(line.encode("utf-8")), 75)
-        self.assertEqual(datetime(2026, 10, 26).weekday(), 0)
+        self.assertEqual(datetime(2026, 10, 31).weekday(), 5)
 
     def test_rsvp_rejects_get(self):
         self.assertEqual(self.client.get("/rsvp/").status_code, 404)

@@ -76,6 +76,10 @@ h1 { color: #294356; }
 }
 .seal-initials { color: #856831; }
 .replay-invitation { color: #5a707c; }
+/* Longer names retain the same hierarchy on narrow invitation cards. */
+@media (max-width: 760px) {
+  #couple-names { font-size: clamp(43px, 13vw, 76px); }
+}
 @media print {
   .date-section { color: var(--ink); background: #e9e8e3; }
   .date-copy h2 em, .date-note, .date-copy > .eyebrow,

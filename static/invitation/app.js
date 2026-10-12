@@ -22,7 +22,7 @@
     musicToggle.setAttribute('aria-busy', 'true');
     try {
       await audio.play();
-      safeStore.set('ag-music', 'on');
+      safeStore.set('aj-music', 'on');
       $('#audio-status').textContent = 'Musiqa yoqildi.';
     } catch {
       $('#audio-status').textContent = 'Ohangni ijro etib bo‘lmadi. Musiqa tugmasini yana bosing.';
@@ -38,7 +38,7 @@
     if (audio.paused) playAudio();
     else {
       audio.pause();
-      safeStore.set('ag-music', 'off');
+      safeStore.set('aj-music', 'off');
       $('#audio-status').textContent = 'Ohang o‘chirildi.';
     }
   });
@@ -50,9 +50,9 @@
 
   const welcome = $('#welcome');
   const welcomeMusic = $('#welcome-music');
-  welcomeMusic.checked = safeStore.get('ag-music') !== 'off';
+  welcomeMusic.checked = safeStore.get('aj-music') !== 'off';
   let reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const openedKey = 'ag-envelope-opened-v2';
+  const openedKey = 'aj-envelope-opened-v2';
   let opening = false;
   let openingTimer;
   let handoffTimer;
@@ -122,7 +122,7 @@
     if (opening) return;
     opening = true;
     if (welcomeMusic.checked) playAudio();
-    else { audio.pause(); safeStore.set('ag-music', 'off'); }
+    else { audio.pause(); safeStore.set('aj-music', 'off'); }
     $('#open-invitation').disabled = true;
     welcomeMusic.disabled = true;
     window.scrollTo({ top: 0, behavior: 'instant' });
@@ -156,7 +156,7 @@
     document.body.classList.remove('is-revealing');
     $('#open-invitation').disabled = false;
     welcomeMusic.disabled = false;
-    welcomeMusic.checked = safeStore.get('ag-music') !== 'off';
+    welcomeMusic.checked = safeStore.get('aj-music') !== 'off';
     welcome.showModal();
     document.body.style.overflow = 'hidden';
   };

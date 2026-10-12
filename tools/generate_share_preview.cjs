@@ -28,11 +28,11 @@ const asset = (relative, mime) => `data:${mime};base64,${fs.readFileSync(path.jo
       .envelope-trigger{width:325px;height:480px;flex-shrink:0;pointer-events:none}
       .envelope-inscription{font-family:var(--sans)}.seal-initials{font-size:35px}
       .copy{flex:1;text-align:center}.bismillah{font:26px/1.5 Amiri,serif;color:#586269;margin:0 0 13px}.eyebrow{font-size:11px;letter-spacing:3px;color:#5a707c;margin:0 0 22px}
-      h1{font:78px/.9 var(--serif);margin:0}h1 span{display:block;font-size:37px;color:var(--gold);margin:8px 0}
+      h1{font:67px/.9 var(--serif);margin:0}h1 span{display:block;font-size:37px;color:var(--gold);margin:8px 0}
       .rule{display:flex;align-items:center;justify-content:center;gap:15px;color:var(--gold);margin:22px auto 16px}.rule:before,.rule:after{content:'';height:1px;background:#97a6ab80;width:65px}.rule svg{width:16px;height:16px;fill:currentColor}
       .invite{font:26px var(--serif);margin:0 0 19px}.date{font-size:16px;letter-spacing:1px;margin:0 0 12px}.place{font-size:12px;color:#687780;margin:0}
-    </style></head><body>${icons}<div class="card">${envelope}<div class="copy"><p class="bismillah" lang="ar" dir="rtl">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p><p class="eyebrow">TANTANALI MAROSIM<br>(TO‘QQIZ TO‘Y)</p><h1>Asliddin<span>&</span>Go‘zal</h1><div class="rule"><svg><use href="#icon-star"/></svg></div><p class="invite">Sizni lutf bilan taklif etamiz.</p><p class="date">26-oktyabr 2026 · 18:00</p><p class="place">Labi hovuz · Karmana, Navoiy</p></div></div></body></html>`, { waitUntil: 'load' });
+    </style></head><body>${icons}<div class="card">${envelope}<div class="copy"><p class="bismillah" lang="ar" dir="rtl">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p><p class="eyebrow">NIKOH TO‘YIGA TAKLIFNOMA</p><h1>Anvarjon<span>&</span>Jasminaxon</h1><div class="rule"><svg><use href="#icon-star"/></svg></div><p class="invite">Sizni lutf bilan taklif etamiz.</p><p class="date">31-oktyabr 2026 · 17:00</p><p class="place">Ratana Restaurant · Pastdarg‘om, Samarqand</p></div></div></body></html>`, { waitUntil: 'load' });
     await page.evaluate(() => document.fonts.ready);
-    await page.screenshot({ path: path.join(root, 'static/invitation/images/invitation-preview-blue.jpg'), type: 'jpeg', quality: 92 });
+    await page.screenshot({ path: path.join(root, 'static/invitation/images/invitation-preview-anvar.jpg'), type: 'jpeg', quality: 92 });
   } finally { await browser.close(); }
 })();

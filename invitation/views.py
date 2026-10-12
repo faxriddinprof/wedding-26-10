@@ -8,8 +8,8 @@ from django.utils import timezone
 from django.views.decorators.http import require_GET
 from django.views.decorators.cache import never_cache
 
-EVENT_DATE = datetime(2026, 10, 26, 18, 0, tzinfo=ZoneInfo("Asia/Tashkent"))
-MAP_URL = "https://www.google.com/maps/search/?api=1&query=Labi+hovuz+to%27yxonasi%2C+Karmana%2C+Navoiy"
+EVENT_DATE = datetime(2026, 10, 31, 17, 0, tzinfo=ZoneInfo("Asia/Tashkent"))
+MAP_URL = "https://maps.app.goo.gl/iJbevmkV5SUXWaeW6"
 
 
 def page_context():
@@ -27,7 +27,7 @@ def home(request):
     context = page_context()
     context.update({
         "share_url": request.build_absolute_uri(reverse("home")),
-        "share_image_url": request.build_absolute_uri(static("invitation/images/invitation-preview-blue.jpg")),
+        "share_image_url": request.build_absolute_uri(static("invitation/images/invitation-preview-anvar.jpg")),
     })
     return render(request, "invitation/home.html", context)
 
@@ -36,17 +36,17 @@ def home(request):
 def calendar_event(request):
     # RFC 5545: fold UTF-8 lines at 75 octets, never splitting a code point.
     lines = [
-        "BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Asliddin Go‘zal//Wedding//UZ",
+        "BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Anvarjon Jasminaxon//Wedding//UZ",
         "CALSCALE:GREGORIAN", "METHOD:PUBLISH", "BEGIN:VEVENT",
-        "UID:asliddin-guzal-20261026@wedding.local",
+        "UID:anvarjon-jasminaxon-20261031@wedding-day-31-10.uz",
         "DTSTAMP:" + timezone.now().strftime("%Y%m%dT%H%M%SZ"),
-        "DTSTART:20261026T130000Z",
-        "SUMMARY:Asliddin va Go‘zal — tantanali marosim (To‘qqiz to‘y)",
-        "LOCATION:Labi hovuz to‘yxonasi\\, Karmana tumani\\, Navoiy viloyati",
-        "DESCRIPTION:Sizni tantanali marosimimiz — To‘qqiz to‘yga lutfan taklif etamiz.\\nManzil: " + MAP_URL,
+        "DTSTART:20261031T120000Z",
+        "SUMMARY:Anvarjon va Jasminaxon — nikoh to‘yi",
+        "LOCATION:Ratana Restaurant to‘yxonasi\\, Pastdarg‘om tumani\\, Samarqand viloyati",
+        "DESCRIPTION:Sizni nikoh to‘yimizga lutfan taklif etamiz.\\nManzil: " + MAP_URL,
         "URL:" + MAP_URL,
         "BEGIN:VALARM", "TRIGGER:-P1D", "ACTION:DISPLAY",
-        "DESCRIPTION:Ertaga Asliddin va Go‘zalning tantanali marosimi (To‘qqiz to‘y)", "END:VALARM",
+        "DESCRIPTION:Ertaga Anvarjon va Jasminaxonning nikoh to‘yi", "END:VALARM",
         "END:VEVENT", "END:VCALENDAR",
     ]
     folded = []
@@ -59,5 +59,5 @@ def calendar_event(request):
             part += char
         folded.append(part)
     result = HttpResponse("\r\n".join(folded) + "\r\n", content_type="text/calendar; charset=utf-8")
-    result["Content-Disposition"] = 'attachment; filename="Asliddin-Gozal.ics"'
+    result["Content-Disposition"] = 'attachment; filename="Anvarjon-Gozal.ics"'
     return result

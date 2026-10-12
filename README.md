@@ -1,7 +1,7 @@
-# Asliddin & Go‘zal · Nikoh to‘yiga taklifnoma
+# Anvarjon & Jasminaxon · Nikoh to‘yiga taklifnoma
 
-Django 6, server-rendered HTML, CSS va vanilla JavaScript. 26-oktyabr 2026-yil,
-18:00, Asia/Tashkent. Labi hovuz, Karmana tumani, Navoiy viloyati.
+Django 6, server-rendered HTML, CSS va vanilla JavaScript. 31-oktyabr 2026-yil,
+17:00, Asia/Tashkent. Ratana Restaurant, Pastdarg‘om tumani, Samarqand viloyati.
 
 ## Ishga tushirish
 
@@ -48,7 +48,7 @@ shu yerda ko‘rinadi. Saytda mehmon javoblarini yig‘ish bo‘limi olib tashla
 - Rang, shrift, joylashuv: `static/invitation/style.css`.
 - Interaktivlik: `static/invitation/app.js`.
 - Sana va xarita: `invitation/views.py`; matndagi sana va kalendar ham mos o‘zgartirilsin.
-- Musiqa: `static/invitation/audio/einaudi-trimmed.m4a` — foydalanuvchi bergan `einaudi.m4a` faylining dastlabki 28 soniyasi kesilgan nusxasi.
+- Musiqa: `static/invitation/audio/kokun-trimmed.mp3` — foydalanuvchi bergan `Kokun.mp3` faylining dastlabki 17 soniyasi kesilgan nusxasi.
 
 Hozir foydalanuvchi taqdim etgan “Ludovico Einaudi — Una Mattina” MP3 fayli
 loyiha ichidan ijro etiladi; YouTube yoki tashqi pleer ishlatilmaydi.
@@ -84,7 +84,7 @@ ular hadis yoki oyatning so‘zma-so‘z tarjimasi emas.
 ### Telegram havola preview’i
 
 Sahifa serverdan Open Graph metama’lumotlarini chiqaradi. Preview rasmi:
-`static/invitation/images/invitation-preview-blue.jpg` (1200×630). Mavjud CSS
+`static/invitation/images/invitation-preview-anvar.jpg` (1200×630). Mavjud CSS
 konvertidan tayyorlangan; ismlar, sana va vaqt ham rasmda ko‘rinadi.
 Uni qayta yaratish: `node tools/generate_share_preview.cjs` (Playwright va
 Chrome talab qilinadi; zarur bo‘lsa `PLAYWRIGHT_MODULE` yo‘lini belgilang).

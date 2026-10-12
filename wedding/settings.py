@@ -4,7 +4,7 @@ from django.core.exceptions import ImproperlyConfigured
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 DEBUG = os.environ.get("DJANGO_DEBUG", "1") == "1"
-SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "local-development-only-asliddin-guzal-wedding")
+SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "local-development-only-anvarjon-jasminaxon-wedding")
 if not DEBUG and SECRET_KEY.startswith("local-development"):
     raise ImproperlyConfigured("Set DJANGO_SECRET_KEY before running in production.")
 ALLOWED_HOSTS = [h.strip() for h in os.environ.get("DJANGO_ALLOWED_HOSTS", "localhost,127.0.0.1,[::1]").split(",") if h.strip()]

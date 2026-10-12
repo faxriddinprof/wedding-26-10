@@ -35,8 +35,8 @@ Original SIL Open Font License matnlari `static/invitation/fonts/licenses/` ichi
 
 ## Musiqa
 
-Faol audio: `static/invitation/audio/einaudi-trimmed.m4a` — foydalanuvchi taqdim
-etgan `einaudi.m4a` faylining boshidagi 28 soniyasi kesilgan nusxasi. Original
+Faol audio: `static/invitation/audio/kokun-trimmed.mp3` — foydalanuvchi taqdim
+etgan `Kokun.mp3` faylining boshidagi 17 soniyasi kesilgan nusxasi. Original
 fayl o‘zgartirilmagan. Lokal HTML audio pleeri orqali
 ijro etiladi. Faylning manbasi va foydalanish litsenziyasi loyiha tomonidan
 tekshirilmagan.
