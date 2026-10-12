@@ -52,10 +52,10 @@ h1 { color: #294356; }
 .envelope-controls .welcome-music { color: #5a707c; }
 .envelope-back { background: #203a4d; border-radius: 1px; box-shadow: none; }
 .envelope-side, .envelope-bottom, .envelope-flap-paper { background-image: none; }
-.envelope-left { background-color: #243f53; }
-.envelope-right { background-color: #203b4f; }
-.envelope-bottom { background-color: #29495f; }
-.envelope-flap-paper { background-color: #304f65; }
+.envelope-left { background-color: #2b4252; }
+.envelope-right { background-color: #263d4d; }
+.envelope-bottom { background-color: #304959; }
+.envelope-flap-paper { background-color: #365060; }
 .envelope-bottom::after {
   background: linear-gradient(130deg, #102a3b12, transparent 55%, #adc7d208);
 }
@@ -71,10 +71,63 @@ h1 { color: #294356; }
 .envelope-flowers-bottom:not(.envelope-flower-light) { opacity: 1; }
 .envelope-inscription { color: #e1d5b9; }
 .envelope-seal {
-  background: linear-gradient(140deg, #fff9e9 8%, #dbc99e 38%, #f1e4c5 64%, #b29b6d);
-  box-shadow: 2px 5px 7px #10273570, inset 2px 3px 4px #fff9e9, inset -2px -3px 5px #b29b6d;
+  background: linear-gradient(140deg, #f7efdc 8%, #d8c8a5 38%, #ece0c5 64%, #b7a17a);
+  box-shadow: 1px 3px 5px #10273550, inset 1px 2px 3px #fff7e5, inset -1px -2px 3px #b7a17a;
 }
 .seal-initials { color: #856831; }
+/* Reflections stay on the material; the surrounding paper keeps its colour. */
+.envelope-glow { display: none; }
+.envelope-seal::after {
+  inset: -1%; border: 0; border-radius: 50%; box-shadow: none;
+  background: conic-gradient(from 20deg, transparent 0deg 200deg, #d2b574 228deg, #fff1ca 252deg, #d2b574 276deg, transparent 304deg 360deg);
+  -webkit-mask-image: radial-gradient(circle, transparent 65%, #000 67% 69%, transparent 71%);
+  mask-image: radial-gradient(circle, transparent 65%, #000 67% 69%, transparent 71%);
+}
+.envelope-flower-light {
+  content: url('images/envelope-florals-blue.svg');
+  filter: brightness(1.9) sepia(.25) saturate(.9) drop-shadow(0 0 1.5px #efd49a70);
+  clip-path: none;
+  -webkit-mask-image: linear-gradient(110deg, transparent 34%, #000 48%, #000 52%, transparent 66%);
+  mask-image: linear-gradient(110deg, transparent 34%, #000 48%, #000 52%, transparent 66%);
+  -webkit-mask-size: 300% 100%; mask-size: 300% 100%;
+  -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+}
+.envelope-portal {
+  background: radial-gradient(ellipse 22% 4% at 50% 55%, #fff3d8b0, #e6bd6850 32%, transparent 75%);
+}
+.envelope-portal::before, .envelope-portal::after { content: none; }
+.is-opening .envelope-sprig { animation: none; }
+.is-opening .envelope-seal { animation: quietSeal 2.35s ease-in-out both; }
+.is-opening .envelope-seal::after { animation: metalReflection 2.35s .05s cubic-bezier(.4,0,.3,1) both; }
+.is-opening .envelope-flowers-top.envelope-flower-light { animation: paperReflection 2.2s .15s ease-in-out both; }
+.is-opening .envelope-flowers-bottom.envelope-flower-light { animation: paperReflection 2.3s .4s ease-in-out both; }
+.is-opening .envelope-portal { animation: seamReflection 1.5s 1.65s ease-in-out both; }
+@keyframes quietSeal {
+  0%,100% { filter: brightness(1) drop-shadow(0 0 0 #eac77c00); }
+  38% { filter: brightness(1.12) drop-shadow(0 0 6px #eac77c80); }
+  65% { filter: brightness(1.07) drop-shadow(0 0 3px #eac77c50); }
+}
+@keyframes metalReflection {
+  0% { opacity: 0; transform: rotate(-35deg); }
+  25% { opacity: 1; }
+  60% { opacity: .8; }
+  100% { opacity: 0; transform: rotate(195deg); }
+}
+@keyframes paperReflection {
+  0% { opacity: 0; -webkit-mask-position: 100% 50%; mask-position: 100% 50%; }
+  30% { opacity: .85; }
+  60% { opacity: .7; }
+  100% { opacity: 0; -webkit-mask-position: 0% 50%; mask-position: 0% 50%; }
+}
+@keyframes seamReflection {
+  0% { opacity: 0; transform: scaleX(.65); }
+  42% { opacity: .7; }
+  100% { opacity: 0; transform: scaleX(1.15); }
+}
+@keyframes envelopeApproach {
+  0%,100% { transform: scale(1); }
+  55% { transform: scale(1.012); }
+}
 .replay-invitation { color: #5a707c; }
 /* Longer names retain the same hierarchy on narrow invitation cards. */
 @media (max-width: 760px) {
